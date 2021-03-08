@@ -1,0 +1,2 @@
+# TwitterPeakCycleAnalysis
+This project is part of PhD research at Syracuse University. We are utilizing the creation times of an influencer's followers in order to identify whether the influencer has global-like influence (stretching beyond multiple timezones). It is shown that we can also approximate the rate at which an influencer has gained their existing follower base over a given time period.
