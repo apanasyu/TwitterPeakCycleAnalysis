@@ -16,3 +16,23 @@ https://developer.twitter.com/en/docs/twitter-api/getting-started/guide
 (By registering an app you will obtain four tokens: consumer key, consumer secret, access token, and access secret. Go inside TwitterAPI.py and put these keys inside getAPI method).
 
 
+Step 1: Twitter API is utilized to collect followers of an influencer
+For example, this code collects the first 500K followers of @NPR:
+
+
+Step 2: Focus on the account creation time of each follower
+Twitter does not store information beyond message and user creation times i.e. there is no information on when user A followed user B. However, there is additional information in the order of followers because the order is such that most recent followers appear first. Focussing on x followers at a time and generating a time distribution (as discussed in project panasyua/timeanalysis check this).
+
+Code for doing this:
+
+We want to find the n that results in peak hour during each time distribution (see paper). Describe algrorithm 1 and show the 24 hour cycle.
+Algorithm 1 code:
+
+Step 3: Baselines based on Meeder approach
+
+Step 4: Peak cycle analysis in general
+MrBeast vs. NPR code
+
+Step 5: Global vs. Local influencer via Peak analysis
+Code for this
+
