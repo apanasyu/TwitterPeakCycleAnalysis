@@ -42,7 +42,7 @@ The code results in a CSV file that contains the number of followers gained on a
 
 ![image](https://user-images.githubusercontent.com/80060152/114786655-7c18af80-9d4c-11eb-876c-11b7ba5ec905.png)
 
-The following Figure shows the estimates for different days going back in time. For @NPR the estimates are close, but for other influencers it may not work as well. Method is expected to work well on influencers that have a large stable following and that are continuing to increase their follower base. There will be periods during which an influencer gains no followers and even loses followers. We can reason only about followers that the influencer currently has, i.e., we cannot know which followers an influencer might have had in the past. If the influencer has lost many original followers, then the signal in the data will be obscured by considerable noise.
+The following Figure shows the estimates for different days going back in time. For @NPR the estimates are close, indicating that @NPR is gaining around 1200-2000 new followers on a daily basis. Method is expected to work well on influencers that have a large stable following and that are continuing to increase their follower base. There will be periods during which an influencer gains no followers and even loses followers. We can reason only about followers that the influencer currently has, i.e., we cannot know which followers an influencer might have had in the past. If the influencer has lost many original followers, then the signal in the data will be obscured by considerable noise.
 
 ![image](https://user-images.githubusercontent.com/80060152/114788040-cbf87600-9d4e-11eb-98a8-aaaba587b6d5.png)
 
