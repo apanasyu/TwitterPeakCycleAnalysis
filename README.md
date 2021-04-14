@@ -28,18 +28,32 @@ For example, this code collects the first 100K followers of @NPR (the follower i
         setupDBUsingSingleUser(twitterAPI1, influencerScreenName, maxFollowerToCollect, followersDir, port)
 
 Step 2: Focus on the account creation time of each follower
-Twitter does not store information beyond message and user creation times i.e. there is no information on when user A followed user B. However, there is additional information in the order of followers because the order is such that most recent followers appear first. Focussing on x followers at a time and generating a time distribution (as discussed in project apanasyu/TwitterPeakCycleAnalysis).
+Twitter does not store information beyond message and user creation times i.e. there is no information on when user A followed user B. However, there is additional information in the order of followers because the order is such that most recent followers appear first. We utilize four separate methods for estimating number of followers gained on daily basis applied over the collected followers (each method is described in APPENDIX further below). 
 
-Code for doing this:
+        import os.path, time, datetime
+        ctimeCreatedAt = time.ctime(os.path.getctime(filePath))
+        followerCollectionTime = datetime.datetime.strptime(time.ctime(os.path.getctime(followersDir+'npr.pickle')), "%a %b %d %H:%M:%S %Y")
+        db_name = 'npr'
+        step = 20000 #number of followers to consider
+        from EvolvingPopularity import calculateDailyFollowerGain
+        calculateDailyFollowerGain(step, db_name, followersDir, port, followerCollectionTime, outputDir)
 
-We want to find the n that results in peak hour during each time distribution (see paper). Describe algrorithm 1 and show the 24 hour cycle.
-Algorithm 1 code:
+The code results in a CSV file that contains the number of followers gained on a daily basis.
 
-Step 3: Baselines based on Meeder approach
+![image](https://user-images.githubusercontent.com/80060152/114786655-7c18af80-9d4c-11eb-876c-11b7ba5ec905.png)
 
-Step 4: Peak cycle analysis in general
+The following Figure shows the estimates for different days going back in time. For @NPR the estimates are close, but for other influencers it may not work as well. Method is expected to work well on influencers that have a large stable following and that are continuing to increase their follower base. There will be periods during which an influencer gains no followers and even loses followers. We can reason only about followers that the influencer currently has, i.e., we cannot know which followers an influencer might have had in the past. If the influencer has lost many original followers, then the signal in the data will be obscured by considerable noise.
+
+![image](https://user-images.githubusercontent.com/80060152/114786585-5b505a00-9d4c-11eb-8c20-abe1ebfc95ad.png)
+
+Step 3: Peak cycle analysis in general
 MrBeast vs. NPR code
 
-Step 5: Global vs. Local influencer via Peak analysis
+Step 4: Global vs. Local influencer via Peak analysis
 Code for this
+
+
+APPENDIX: Four Methods for Inferring number of followers
+
+
 
