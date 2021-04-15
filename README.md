@@ -35,7 +35,7 @@ For a specific influencer i,  let F(i) = [f0, f1, f2, ..., fc]  be the list of a
 
         db_name = 'npr'
         from Visualization import vizUsingFollowerSnapshots
-        vizUsingFollowerSnapshots(db_name, hoursInOrder, 50, 70, outputDir)
+        vizUsingFollowerSnapshots(db_name, 50, 70, followersDir, outputDir, port)
 
 The n followers at a time are utilized to form a time distribution (see apanasyu/TwitterMining and reference [1]). Figure illustrates m time distributions drawn one on top of the other. In this figure, for each distribution, the hour during which the frequency peaks is highlighted in red. We observe that each distribution has a peak and the peak shifts by about an hour. 
 
