@@ -17,7 +17,7 @@ https://developer.twitter.com/en/docs/twitter-api/getting-started/guide
 
 # APPROACH
 Step 1: Twitter API is utilized to collect followers of an influencer
-For example, this code collects the first 100K followers of @NPR (the follower ids are initially stored as a pickle file, then once the followers ids are collected each id is used to obtain follower information that is then stored in MongoDB):
+For example, this code collects the first 100K followers of @NPR (the follower ids are initially stored as a pickle file (npr.pickle in folder followersDir), then once the followers ids are collected each id is used to obtain follower information that is then stored in MongoDB in database using influencer screenname (npr)):
 
         port = 27021
         from MainDBSetup import setupDBUsingSingleUser
@@ -31,7 +31,6 @@ Step 2: Focus on the account creation time of each follower
 Twitter does not store information beyond message and user creation times i.e. there is no information on when user A followed user B. However, there is additional information in the order of followers because the order is such that most recent followers appear first. We utilize four separate methods for estimating number of followers gained on daily basis applied over the collected followers (each method is described in APPENDIX further below). 
 
         import os.path, time, datetime
-        ctimeCreatedAt = time.ctime(os.path.getctime(filePath))
         followerCollectionTime = datetime.datetime.strptime(time.ctime(os.path.getctime(followersDir+'npr.pickle')), "%a %b %d %H:%M:%S %Y")
         db_name = 'npr'
         step = 20000 #number of followers to consider
