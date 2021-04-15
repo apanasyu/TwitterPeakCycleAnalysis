@@ -52,7 +52,9 @@ Step 4: Global vs. Local influencer via Peak analysis
 Code for this
 
 
-APPENDIX: Four Methods for Inferring number of followers gained on daily basis
+# APPENDIX: 
+
+Four Methods for Inferring number of followers gained on daily basis:
 
 For a specific influencer i,  let F(i) = [f0, f1, f2, ..., fc]  be the list of account creation times of its followers. The followers of an influencer are returned by Twitter in a list that is in the order of following time i.e. most recent follower first. We select the first m*n values from this list for generating the matrix A. In matrix A, there are m rows where each row consists of n followers (A_{i,j} refers to follower f_{i*n+j}). As an illustration the following code generates a visualization for influencer @NPR where m=50 and n=70. 
 
