@@ -62,18 +62,18 @@ For a specific influencer i,  let F(i) = [f0, f1, f2, ..., fc]  be the list of a
 
 The n followers at a time are utilized to form a time distribution (see apanasyu/TwitterMining and reference [1]). Figure illustrates m time distributions drawn one on top of the other. In this figure, for each distribution, the hour during which the frequency peaks is highlighted in red. We observe that each distribution has a peak and the peak shifts by about an hour. 
 
-<img src="https://user-images.githubusercontent.com/80060152/114931206-ee989680-9e03-11eb-87f0-c48955ca4e39.png" width="300">
+<img src="https://user-images.githubusercontent.com/80060152/114931206-ee989680-9e03-11eb-87f0-c48955ca4e39.png" width="600">
 
 If we compute and plot the vector of cosine similarities between (sine, cosine) representations of these hours with the representation of hour 16 (where the peak occurs in the first distribution), we obtain the curve shown below. The curve has a periodicity in that it starts at 1 goes to -1 and back up to 1 (starts at hour 16 and back to 16).
 
-<img src="https://user-images.githubusercontent.com/80060152/114931032-ae391880-9e03-11eb-84de-e20a3d5f77c9.png" width="300">
+<img src="https://user-images.githubusercontent.com/80060152/114931032-ae391880-9e03-11eb-84de-e20a3d5f77c9.png" width="600">
 
 We are interested in the size of $n$ that results in temporal distributions that peak exactly one hour apart for all 24 hours (or as close to it as possible). Thus the methods based on time distribution utilize m=24:
 The first method uses Pearson Correlation between the vector of cosine similarities using peaks vs. cosine similarity for hours that are in order (that is the cosine similarities of (sine, cosine) representation of a specific hour A, with  (sine, cosine) representations of hours A, (A+1), (A+2), ...). The n that results in higher Pearson Correlation coefficient is recorded.
 The second method uses peaks across the 24 time distributions and records n that results in a slope as close to -1 as possible.
 The final two methods (baseline 1 and baseline 2) are modified versions of approach first proposed by Meeder et al. [2]. Let Lm be the list of (t − account creation time of the jth follower in seconds) where t is the datetime when the followers were collected. For our problem we are interested in the index where the account creation datetime for the follower is as close to the datetime that is 24 hours before the follower collection took place. Here is the mathematical formulation (see source code and [1] for more details).
 
-<img src="https://user-images.githubusercontent.com/80060152/114940473-e34b6800-9e0f-11eb-826b-1affbca743ae.png" width="300">
+<img src="https://user-images.githubusercontent.com/80060152/114940473-e34b6800-9e0f-11eb-826b-1affbca743ae.png" width="600">
 
 [1] Panasyuk, Aleksey, Kishan G. Mehrotra, Edmund Szu-Li Yu, and Chilukuri K. Mohan. "Inferring Degree of Localization and Popularity of Twitter Topics and Persons using Temporal Features." Lecture Notes in Computer Science, Springer 2021
 [2] Meeder, Brendan, et al. "We know who you followed last summer: inferring social link creation times in twitter." Proceedings of the 20th international conference on World wide web. 2011.
