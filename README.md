@@ -73,7 +73,7 @@ The first method uses Pearson Correlation between the vector of cosine similarit
 The second method uses peaks across the 24 time distributions and records n that results in a slope as close to -1 as possible.
 The final two methods (baseline 1 and baseline 2) are modified versions of approach first proposed by Meeder et al. [2]. Let Lm be the list of (t − account creation time of the jth follower in seconds) where t is the datetime when the followers were collected. For our problem we are interested in the index where the account creation datetime for the follower is as close to the datetime that is 24 hours before the follower collection took place. Here is the mathematical formulation (see source code and [1] for more details).
 
-<img src="https://user-images.githubusercontent.com/80060152/114940473-e34b6800-9e0f-11eb-826b-1affbca743ae.png" width="600">
+<img src="https://user-images.githubusercontent.com/80060152/114945140-ce260780-9e16-11eb-8841-817bfd4b1d76.png" width="300">
 
 [1] Panasyuk, Aleksey, Kishan G. Mehrotra, Edmund Szu-Li Yu, and Chilukuri K. Mohan. "Inferring Degree of Localization and Popularity of Twitter Topics and Persons using Temporal Features." Lecture Notes in Computer Science, Springer 2021
 [2] Meeder, Brendan, et al. "We know who you followed last summer: inferring social link creation times in twitter." Proceedings of the 20th international conference on World wide web. 2011.
