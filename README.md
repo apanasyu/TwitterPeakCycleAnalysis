@@ -72,12 +72,10 @@ The following Figure shows the estimates for different days going back in time. 
 
 ![image](https://user-images.githubusercontent.com/80060152/114788040-cbf87600-9d4e-11eb-98a8-aaaba587b6d5.png)
 
-Step 3: Peak cycle analysis in general
+# Peak Cycle Analysis for Global vs. Local influencer identification
 
-Peak cycle analysis can be used to infer number of followers gained on a daily basis. This is useful for understanding how the influencer's popularity is evolving and can be used to identify rising stars (those influencers that have a large ratio of new vs. old followers). 
+Previous section showed how peak cycle analysis can be used to infer number of followers gained on a daily basis. This is useful for understanding how the influencer's popularity is evolving and can be used to identify rising stars (those influencers that have a large ratio of new vs. old followers). 
 
-Step 4: Global vs. Local influencer via Peak analysis
-Code for this
 
 
 # REFERENCES: 
