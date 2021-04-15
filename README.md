@@ -75,5 +75,6 @@ The final two methods (baseline 1 and baseline 2) are modified versions of appro
 
 <img src="https://user-images.githubusercontent.com/80060152/114945140-ce260780-9e16-11eb-8841-817bfd4b1d76.png" width="500">
 
-[1] Panasyuk, Aleksey, Kishan G. Mehrotra, Edmund Szu-Li Yu, and Chilukuri K. Mohan. "Inferring Degree of Localization and Popularity of Twitter Topics and Persons using Temporal Features." Lecture Notes in Computer Science, Springer 2021
+[1] Panasyuk, Aleksey, Kishan G. Mehrotra, Edmund Szu-Li Yu, and Chilukuri K. Mohan. "Inferring Degree of Localization and Popularity of Twitter Topics and Persons using Temporal Features." Lecture Notes in Computer Science, Springer 2021.
+
 [2] Meeder, Brendan, et al. "We know who you followed last summer: inferring social link creation times in twitter." Proceedings of the 20th international conference on World wide web. 2011.
