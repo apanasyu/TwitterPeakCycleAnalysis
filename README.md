@@ -66,7 +66,7 @@ The n followers at a time are utilized to form a time distribution (see apanasyu
 
 If we compute and plot the vector of cosine similarities between (sine, cosine) representations of these hours with the representation of hour 16 (where the peak occurs in the first distribution), we obtain the curve shown below. The curve has a periodicity in that it starts at 1 goes to -1 and back up to 1 (starts at hour 16 and back to 16).
 
-<img src="https://user-images.githubusercontent.com/80060152/114931032-ae391880-9e03-11eb-84de-e20a3d5f77c9.png" width="600">
+<img src="https://user-images.githubusercontent.com/80060152/114931032-ae391880-9e03-11eb-84de-e20a3d5f77c9.png" width="400">
 
 We are interested in the size of $n$ that results in temporal distributions that peak exactly one hour apart for all 24 hours (or as close to it as possible). Thus the methods based on time distribution utilize m=24:
 The first method uses Pearson Correlation between the vector of cosine similarities using peaks vs. cosine similarity for hours that are in order (that is the cosine similarities of (sine, cosine) representation of a specific hour A, with  (sine, cosine) representations of hours A, (A+1), (A+2), ...). The n that results in higher Pearson Correlation coefficient is recorded.
