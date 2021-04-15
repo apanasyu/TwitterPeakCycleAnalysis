@@ -15,7 +15,7 @@ https://developer.twitter.com/en/docs/twitter-api/getting-started/guide
 
 (By registering an app you will obtain four tokens: consumer key, consumer secret, access token, and access secret. Go inside TwitterAPI.py and put these keys inside getAPI method).
 
-
+# APPROACH
 Step 1: Twitter API is utilized to collect followers of an influencer
 For example, this code collects the first 100K followers of @NPR (the follower ids are initially stored as a pickle file, then once the followers ids are collected each id is used to obtain follower information that is then stored in MongoDB):
 
