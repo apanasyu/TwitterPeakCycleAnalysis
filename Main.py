@@ -55,6 +55,6 @@ if __name__ == '__main__':
         step = 100
         outputDir2 = "peakAnalysis/"
         from PeakAnalysis import peakVisualization, cosineSimilarityBetweenPeaks 
-        #peakVisualization(userNames, followersDir, outputDir2, port, step)
+        peakVisualization(userNames, followersDir, outputDir2, port, step)
         cosineSimilarityBetweenPeaks(userNames, followersDir, outputDir2, port, step)
         
