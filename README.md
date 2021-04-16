@@ -72,21 +72,28 @@ The following Figure shows the estimates for different days going back in time. 
 
 ![image](https://user-images.githubusercontent.com/80060152/114788040-cbf87600-9d4e-11eb-98a8-aaaba587b6d5.png)
 
-# Peak Cycle Analysis for Global vs. Local influencer identification
+# Peak Cycle Analysis in General
 
 Previous section showed how peak cycle analysis can be used to infer number of followers gained on a daily basis. This is useful for understanding how the influencer's popularity is evolving and can be used to identify rising stars (those influencers that have a large ratio of new vs. old followers). Peak analysis can also reveal whether an influencer has a more global like following and can be used to compare two influencers.
 
-The following code takes the followers of two influencers. For each influencer n=50 (specified via step) i.e. 50 followers at a time used to generate a time distribution and the peak of the time distribution is recorded. 
+The following code takes the followers of two influencers. For each influencer n=100 (specified via step) i.e. 100 followers at a time used to generate a time distribution and the peak of the time distribution is recorded. 
 
-        step = 50
+        step = 100
         userNames = ['npr', 'bbcworld']
         outputDir2 = "peakAnalysis/"
-        from PeakAnalysis import peakVisualization
+        from PeakAnalysis import peakVisualization, cosineSimilarityBetweenPeaks 
         peakVisualization(userNames, followersDir, outputDir2, port, step)
+        cosineSimilarityBetweenPeaks(userNames, followersDir, outputDir2, port, step)
         
-This code generates the following Figure.
+The peakVisualization() function generates the following Figure. 100K followers of NPR and 100K follower of BBCWorld used to generate figure. There are a total of 100K/100=1000 points plotted for each. From Figure we see a period of inactivity for NPR around hours 5-10 whereas BBCWorld has peaks during all hours (this visually indicates that BBCWorld is more global, see [1] for more details).
 
+![image](https://user-images.githubusercontent.com/80060152/115067852-77c0d380-9ebf-11eb-9dc6-c929b32d5672.png)
 
+The cosineSimilarityBetweenPeaks() function generates Figure below which illustrates a larger number of followers attracted on a daily basis by BBCWorld. 
+
+![image](https://user-images.githubusercontent.com/80060152/115084672-33d9c880-9ed7-11eb-8d5d-61165858ef96.png)
+
+Global vs. Local influencer identification via peak cycle analysis is described in [1]. Additional signal processing methods may yield additional insights. This code serves as a means for collecting and visualizing this data.
 
 # REFERENCES: 
 
