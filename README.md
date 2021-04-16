@@ -74,7 +74,17 @@ The following Figure shows the estimates for different days going back in time. 
 
 # Peak Cycle Analysis for Global vs. Local influencer identification
 
-Previous section showed how peak cycle analysis can be used to infer number of followers gained on a daily basis. This is useful for understanding how the influencer's popularity is evolving and can be used to identify rising stars (those influencers that have a large ratio of new vs. old followers). 
+Previous section showed how peak cycle analysis can be used to infer number of followers gained on a daily basis. This is useful for understanding how the influencer's popularity is evolving and can be used to identify rising stars (those influencers that have a large ratio of new vs. old followers). Peak analysis can also reveal whether an influencer has a more global like following and can be used to compare two influencers.
+
+The following code takes the followers of two influencers. For each influencer n=50 (specified via step) i.e. 50 followers at a time used to generate a time distribution and the peak of the time distribution is recorded. 
+
+        step = 50
+        userNames = ['npr', 'bbcworld']
+        outputDir2 = "peakAnalysis/"
+        from PeakAnalysis import peakVisualization
+        peakVisualization(userNames, followersDir, outputDir2, port, step)
+        
+This code generates the following Figure.
 
 
 
